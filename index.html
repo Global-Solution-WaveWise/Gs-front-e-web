@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/css/imports.css" />
+    <script src="./src/scripts/script.js" defer></script>
+    <link rel="icon" type="image/png" href="./src/assets/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>WaveWise</title>
+  </head>
+  <body>
+    <header class="header background">
+      <nav class="nav">
+        <img src="./src/assets/logo.png" alt="Logo da empresa" class="logo" />
+        <button class="btn_navbar"></button>
+        <ul class="lista-navbar background">
+          <li class="color">
+            <div class="brush flex gap20">
+              <i class="fa-solid fa-paintbrush cor pincel" style="color: #2156b0" onclick="trocar('#2156b0')"></i>
+              <i class="fa-solid fa-paintbrush cor pincel" style="color: #0687ea" onclick="trocar('#0687ea')"></i>
+              <i class="fa-solid fa-paintbrush cor pincel" style="color: #0a1933" onclick="trocar('#0a1933')"></i>
+            </div>
+          </li>
+          <li><a href="#sectionCep">Enchente</a></li>
+          <li><a href="#abrigos">Abrigo</a></li>
+          <li><a href="#catalogo">Lixeira</a></li>
+          <li><a href="./src/pages/quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img
+        class="torneira"
+        src="./src/assets/torneira-background.png"
+        alt="background de torneira"
+      />
+
+      <section class="home center gap70">
+        <div class="contentHome flex column">
+          <h1>SMARTFLOW SYSTEM</h1>
+          <p class="paragraph">
+            A Wave Wise visa mitigar as enchentes no Brasil, protegendo vidas e
+            bens através da inteligência tecnológica. Sua abordagem foca em
+            prever, comunicar e empoderar comunidades com informações precisas e
+            acessíveis.
+          </p>
+          <button class="account buttonsRound font-koulen">CRIAR CONTA</button>
+          <button class="trashers buttonsRound font-koulen">
+            MAPA LIXEIRAS
+          </button>
+        </div>
+        <div class="buttons gap70 flex column center">
+          <button class="lixeiras font-kumbh-sans buttonsQuadrados">
+            <img src="./src/assets/lixo-icon.png" alt="ícone de lixeiras" />
+            LIXEIRAS INTELIGENTES
+          </button>
+          <button class="enchentes font-kumbh-sans buttonsQuadrados">
+            <img
+              src="./src/assets/enchente-icon.png"
+              alt="ícone de enchentes"
+            />
+            MONITORAMENTO DE ENCHENTES
+          </button>
+          <button class="gap20 font-kumbh-sans buttonsQuadrados">
+            <img src="./src/assets/abrigo-icon.png" alt="ícone de abrigo" />
+            ABRIGOS PRÓXIMOS
+          </button>
+        </div>
+      </section>
+
+      <section class="problemas center column">
+        <h2 class="subTitulos">Problema Atual</h2>
+        <p class="paragraph text-center">
+          As enchentes causam grandes prejuízos materiais e ameaçam a vida das
+          pessoas em áreas vulneráveis. <br />
+          <strong
+            >Falta uma comunicação rápida e eficiente para prevenir
+            desastres.</strong
+          >
+          <br />
+          Sem informações em tempo real, moradores não conseguem se preparar nem
+          acessar abrigos seguros a tempo, aumentando o risco de acidentes e
+          perdas.
+        </p>
+        <div class="img-borda">
+          <img
+            src="./src/assets/carro-no-alagamento.png"
+            alt="Foto de um carro passando por um alagamento"
+          />
+        </div>
+      </section>
+
+      <section class="tecnologias center column">
+        <h2 class="subTitulos">Tecnologias Utilizadas</h2>
+        <p class="text-center paragraph">
+          <strong>Sensores IoT são instalados em pontos críticos</strong> para
+          medir o nível da água. Enviando dados em tempo real para uma
+          plataforma na nuvem, permitindo alertas imediatos sobre enchentes. O
+          aplicativo móvel usa GPS ou CEP para identificar a localização do
+          usuário e mostrar, em mapas interativos, os
+          <strong>abrigos mais próximos e áreas de risco.</strong>
+        </p>
+        <p class="text-center paragraph">
+          As <strong>lixeiras inteligentes</strong> usam
+          <strong>sensores IoT</strong> para monitorar o
+          <strong>volume de lixo</strong> e fecham automaticamente quando quase
+          cheias. O GPS integrado permite que os usuários
+          <strong>localizem cada lixeira no mapa</strong> e acompanhem a
+          porcentagem de sua capacidade. Isso facilita a gestão do lixo e ajuda
+          a manter a cidade limpa.
+        </p>
+
+        <div class="img-borda alagamento-img">
+          <img
+            class="alagamento-img1"
+            src="./src/assets/exemplo-monitoramento.png"
+            alt="instrução de como funciona o monitoramento"
+          />
+          <img
+            class="alagamento-img2"
+            src="./src/assets/lixeira-explicacao.png"
+            alt="Explicação de como funciona as lixeira inteligentes"
+          />
+        </div>
+      </section>
+
+      <section class="objetivos center column text-center">
+        <h2 class="subTitulos">Objetivos</h2>
+        <p class="paragraph">
+          <strong>Salvar vidas</strong> com alertas de enchente em tempo real e
+          facilitar o acesso a <br />
+          <strong>abrigos seguros próximos</strong> do usuário. <br />
+          <strong>Reduzir alagamentos urbanos</strong>, prevenindo o entupimento
+          de bueiros com o uso de <br />
+          <strong>lixeiras inteligentes e conectadas.</strong>
+        </p>
+        <div class="img-borda2 cidadeAlagada">
+          <img
+            class="imgCidadeAlagada"
+            src="./src/assets/cidade-alagada.png"
+            alt="Foto da cidade alagada"
+          />
+        </div>
+      </section>
+
+      <section class="publicoAlvo center column">
+        <h2 class="subTitulos">Público alvo</h2>
+        <p class="paragraph text-center">
+          <strong>Moradores</strong> de áreas que alagam,
+          <strong>famílias</strong> em zonas urbanas e
+          <strong
+            >agentes <br />
+            públicos que atuam em emergências. <br
+          /></strong>
+          E quem quer. viver em uma
+          <strong>cidade mais limpa e segura,</strong> com lixeiras modernas que
+          <br />
+          ajudam a evitar enchentes.
+        </p>
+        <div class="img-borda publico-img">
+          <img
+            class="publico-img1"
+            src="./src/assets/pessoas-ajudando-na-limpeza.png"
+            alt="Pessoas ajudando na limpeza"
+          />
+          <img
+            class="publico-img2"
+            src="./src/assets/colhendo-garrafas.png"
+            alt="Colocando garrafas de plástico no saco de lixo"
+          />
+        </div>
+      </section>
+
+      <section class="beneficios center column">
+        <h2 class="subTitulos">Quais são os benefícios?</h2>
+        <p class="paragraph text-center">
+          <strong>Alertas preventivos</strong> com base na sua localização e
+          acesso rápido aos abrigos <br />
+          mais próximos via GPS ou CEP. <br />
+          Você também encontrará lixeiras próximas, sabe o quanto estão cheias e
+          <strong
+            >evita jogar lixo em locais que <br />
+            causam entupimento.</strong
+          >
+        </p>
+        <div class="img-borda3">
+          <img
+            class="img-beneficios"
+            src="./src/assets/beneficios-img.png"
+            alt="Pessoa mostrando os benefícios do aplicativo"
+          />
+        </div>
+      </section>
+
+      <section class="ajudar center column">
+        <h2 class="subTitulos">Como ajudar no dia a dia?</h2>
+        <p class="paragraph text-center">
+          O app te avisa sobre <strong>riscos de enchente</strong> e indica
+          caminhos seguros , tudo direto no seu celular. <br />
+          No cotidiano, você joga o lixo em lixeiras inteligentes, que se fecham
+          sozinhas <br />
+          ao atingir a capacidade, <strong>mantendo as ruas limpas.</strong>
+        </p>
+        <div class="img-borda3">
+          <img
+            src="./src/assets/mulher-mexendo-no-telefone.png"
+            alt="Mulher mexendo no aplicativo"
+          />
+        </div>
+      </section>
+
+      <section class="background" id="sectionCep">
+        <h2 class="subTitulos">Monitoramento de enchentes</h2>
+        <div id="map"></div>
+        <div class="div-cep">
+          <input type="text" id="cep" placeholder="Digite o CEP" />
+          <button id="buscar">Buscar</button>
+        </div>
+        <div id="clima"></div>
+      </section>
+
+      <section class="sectionAbrigos" id="abrigos">
+        <h2 class="subTitulos">Abrigos</h2>
+        <div class="abrigos">
+          <div class="abrigoCard">
+            <div class="abrigoHeader">
+              <h4>CTA Prates I, II e III</h4>
+              <p><i class="fa-solid fa-location-dot"></i> 1 KM de você</p>
+            </div>
+            <p class="abrigoEndereco">
+              Endereço: Rua Prates, 1101 e 1114 – Bom Retiro
+            </p>
+          </div>
+
+          <div class="abrigoCard">
+            <div class="abrigoHeader">
+              <h4>CTA Anhangabaú</h4>
+              <p><i class="fa-solid fa-location-dot"></i> 1,5 KM de você</p>
+            </div>
+            <p class="abrigoEndereco">
+              Endereço: Praça da Bandeira, 15 – Centro
+            </p>
+          </div>
+
+          <div class="abrigoCard">
+            <div class="abrigoHeader">
+              <h4>CTA Liberdade</h4>
+              <p><i class="fa-solid fa-location-dot"></i> 3 KM de você</p>
+            </div>
+            <p class="abrigoEndereco">
+              Endereço: Avenida Prefeito Passos, 198 – Liberdade
+            </p>
+          </div>
+
+          <div class="abrigoCard">
+            <div class="abrigoHeader">
+              <h4>CTA Brás</h4>
+              <p><i class="fa-solid fa-location-dot"></i> 5 KM de você</p>
+            </div>
+            <p class="abrigoEndereco">
+              Endereço: Avenida Alcântara Machado, 725/729 – Brás
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="smartflowSection background">
+        <div class="container">
+          <h1 class="tituloPrincipal">SMARTFLOW<br />SYSTEM</h1>
+          <p class="subtitulo">
+            PARA UMA POPULAÇÃO CONECTADA, CONSCIENTE E LIMPA
+          </p>
+
+          <div class="setaBaixo">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+          <p class="descricao">
+            Com o crescimento acelerado dos centros urbanos, a gestão eficiente
+            de resíduos sólidos tornou-se um dos maiores desafios das cidades. A
+            coleta irregular, o descarte inadequado e a superlotação das
+            lixeiras públicas impactam diretamente na qualidade de vida da
+            população, na saúde pública e no meio ambiente. <br /><br />
+            Diante disso, propomos uma solução tecnológica e sustentável:
+            <strong
+              >lixeiras inteligentes espalhadas pela cidade, equipadas com
+              sensores que monitoram em tempo real sua capacidade de
+              armazenamento.</strong
+            >
+          </p>
+
+          <div class="imagemMapa">
+            <img
+              src="./src/assets/lixeiras.png"
+              alt="Mapa com sensores de lixeira"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer background">
+      <div class="footer-content">
+        <h4>WaveWise</h4>
+        <article class="redes-sociais">
+          <p>Redes sociais</p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </article>
+        <article class="desenvolvedores">
+          <p>Desenvolvedores</p>
+          <div class="img-desenvolvedores">
+            <a target="_blank" href="https://github.com/DevMauroMaia">
+              <img
+                class="dev1"
+                src="./src/assets/devMauro.png"
+                alt="Foto dos desenvolvedores"
+              />
+            </a>
+            <a
+              target="_blank"
+              class="link-dev"
+              href="https://github.com/Naluaqui"
+            >
+              <img
+                class="dev2"
+                src="./src/assets/devAna.png"
+                alt="Foto dos desenvolvedores"
+              />
+            </a>
+          </div>
+        </article>
+      </div>
+      <p>&copy; 2025 SeuSite. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
