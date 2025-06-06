@@ -1,0 +1,66 @@
+.objetivos {
+  padding-top: 61px;
+}
+
+.objetivos h2 {
+  padding-bottom: 57px;
+}
+
+.objetivos img {
+  width: 100%;
+  height: 389px;
+  padding: 0 1%;
+}
+
+.objetivos p {
+  width: 1077x;
+  height: 111px;
+  margin-bottom: 61px;
+}
+
+.img-borda2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 713px;
+  height: 416px;
+  background: #fff;
+  border-radius: 16px;
+  max-width: 1080px;
+}
+
+.img-borda2 img {
+  border-radius: 20px;
+}
+
+/* Responsividade para .img-borda2 e imagem interna */
+@media (max-width: 900px) {
+  .img-borda2 {
+    width: 95%;
+    height: auto;
+    min-width: unset;
+    max-width: 100%;
+    padding: 0;
+  }
+  .img-borda2 img {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 600px) {
+  .img-borda2 {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    padding: 0;
+  }
+  .img-borda2 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
