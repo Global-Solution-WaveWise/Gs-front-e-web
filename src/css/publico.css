@@ -1,0 +1,25 @@
+.publicoAlvo {
+  margin-top: 60px;
+}
+
+.publicoAlvo p { 
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+  .publico-img {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .publico-img1 {
+    width: 50%;
+  }
+  
+  .publico-img2 {
+    width: 50%;
+  }
+}
