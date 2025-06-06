@@ -1,0 +1,70 @@
+#sectionCep {
+  padding-top: 40px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#cep h2 {
+  margin-bottom: 20px;
+}
+
+#map {
+  height: 400px;
+  width: 80%;
+}
+
+.div-cep {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.div-cep input {
+  width: 600px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  color: black;
+}
+
+.div-cep button {
+  width: 200px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+#clima {
+  margin-top: 30px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(2, 54, 91);
+  background-color: black;
+  border-radius: 20px;
+  width: 600px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .div-cep input {
+    width: 50%;
+  }
+
+  .div-cep button {
+    width: 40%;
+  }
+  
+  #clima {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: auto;
+  }
+}

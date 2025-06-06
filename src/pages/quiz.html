@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links -->
+    <link rel="stylesheet" href="../css/imports.css" />
+    <script src="../scripts/quiz.js" defer></script>
+    <script src="../scripts/script.js" defer></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGLJTKB4b-2jKYgKgsMKJCC4xOPI_GYic"
+      async
+      defer
+    ></script>
+
+    <title>WaveWise</title>
+  </head>
+  <body>
+    <header class="header background">
+      <nav class="nav">
+        <img src="../assets/logo.png" alt="Logo da empresa" class="logo" />
+        <button class="btn_navbar"></button>
+        <ul class="lista-navbar background">
+          <li class="color">
+            <div class="brush flex gap20">
+              <i
+                class="fa-solid fa-paintbrush cor"
+                style="color: #2156b0"
+                onclick="trocar('#2156b0')"
+              ></i>
+              <i
+                class="fa-solid fa-paintbrush cor"
+                style="color: #0687ea"
+                onclick="trocar('#0687ea')"
+              ></i>
+              <i
+                class="fa-solid fa-paintbrush cor"
+                style="color: #0a1933"
+                onclick="trocar('#0a1933')"
+              ></i>
+            </div>
+          </li>
+          <li><a href="../../index.html#sectionCep">Enchente</a></li>
+          <li><a href="../../index.html#abrigos">Abrigo</a></li>
+          <li><a href="../../index.html#catalogo">Lixeira</a></li>
+          <li><a href="./src/pages/quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mainQuiz">
+      <p class="flex center">
+        Ajude de nos com informações sobre a sua área para que possamos ajudar
+        você a se prevenir
+      </p>
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="../assets/carrossel-img1.png" alt="Imagem 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="../assets/carrossel-img2.png" alt="Imagem 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="../assets/carrossel-img3.jpg" alt="Imagem  3" />
+        </div>
+        <div class="carousel-controls">
+          <button onclick="mudarSlide(-1)">&#8592; Anterior</button>
+          <button onclick="mudarSlide(1)">Próximo &#8594;</button>
+        </div>
+      </div>
+      <h1 class="tituloQuiz flex center">Quiz: Avalie seu Risco de Enchente</h1>
+      <form id="quizForm" class="flex center column">
+        <div class="pergunta">
+          <label>1. O lugar onde você mora tem histórico de enchentes?</label
+          ><br />
+          <input type="radio" name="p1" value="2" /> Sim<br />
+          <input type="radio" name="p1" value="0" /> Não
+        </div>
+        <div class="pergunta">
+          <label>2. Você mora em casa ou apartamento?</label><br />
+          <input type="radio" name="p2" value="2" /> Casa<br />
+          <input type="radio" name="p2" value="0" /> Apartamento
+        </div>
+        <div class="pergunta">
+          <label
+            >3. Sua residência fica perto de rios, córregos ou encostas?</label
+          ><br />
+          <input type="radio" name="p3" value="2" /> Sim<br />
+          <input type="radio" name="p3" value="0" /> Não
+        </div>
+        <div class="pergunta">
+          <label>4. Há sistemas de drenagem eficientes no seu bairro?</label
+          ><br />
+          <input type="radio" name="p4" value="0" /> Sim<br />
+          <input type="radio" name="p4" value="2" /> Não
+        </div>
+        <div class="pergunta">
+          <label>5. Você já teve prejuízos por causa de enchentes?</label><br />
+          <input type="radio" name="p5" value="2" /> Sim<br />
+          <input type="radio" name="p5" value="0" /> Não
+        </div>
+        <div class="pergunta">
+          <label>6. Você possui plano de evacuação em caso de emergência?</label
+          ><br />
+          <input type="radio" name="p6" value="0" /> Sim<br />
+          <input type="radio" name="p6" value="2" /> Não
+        </div>
+        <div class="pergunta">
+          <label
+            >7. Você tem seguro residencial que cobre desastres naturais?</label
+          ><br />
+          <input type="radio" name="p7" value="0" /> Sim<br />
+          <input type="radio" name="p7" value="2" /> Não
+        </div>
+        <div class="pergunta">
+          <label>8. Já presenciou alagamentos no seu trajeto diário?</label
+          ><br />
+          <input type="radio" name="p8" value="2" /> Sim<br />
+          <input type="radio" name="p8" value="0" /> Não
+        </div>
+        <div class="pergunta">
+          <label>9. Seu bairro tem coleta regular de lixo?</label><br />
+          <input type="radio" name="p9" value="0" /> Sim<br />
+          <input type="radio" name="p9" value="2" /> Não
+        </div>
+        <div class="pergunta">
+          <label>10. Você já recebeu alertas da Defesa Civil?</label><br />
+          <input type="radio" name="p10" value="2" /> Sim<br />
+          <input type="radio" name="p10" value="0" /> Não
+        </div>
+
+        <button type="submit">Verificar Nível de Risco</button>
+      </form>
+
+      <div class="resultado flex center" id="resultado"></div>
+    </main>
+    <footer class="site-footer background">
+      <div class="footer-content">
+        <h4>WaveWise</h4>
+        <article class="redes-sociais">
+          <p>Redes sociais</p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </article>
+        <article class="desenvolvedores">
+          <p>Desenvolvedores</p>
+          <div class="img-desenvolvedores">
+            <a target="_blank" href="https://github.com/DevMauroMaia">
+              <img
+                class="dev1"
+                src="../assets/devMauro.png"
+                alt="Foto dos desenvolvedores"
+              />
+            </a>
+            <a
+              target="_blank"
+              class="link-dev"
+              href="https://github.com/Naluaqui"
+            >
+              <img
+                class="dev2"
+                src="../assets/devAna.png"
+                alt="Foto dos desenvolvedores"
+              />
+            </a>
+          </div>
+        </article>
+      </div>
+      <p>&copy; 2025 SeuSite. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

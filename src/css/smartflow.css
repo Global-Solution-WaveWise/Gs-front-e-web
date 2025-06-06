@@ -1,0 +1,75 @@
+.smartflowSection {
+  background: linear-gradient(to bottom, #005C97, #363795); /* ajuste para seu azul */
+  color: white;
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.smartflowSection .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tituloPrincipal {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.setaBaixo i {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.descricao {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.descricao strong {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.imagemMapa img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .tituloPrincipal {
+    font-size: 36px;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+
+  .setaBaixo i {
+    font-size: 20px;
+  }
+}

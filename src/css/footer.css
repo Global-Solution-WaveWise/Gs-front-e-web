@@ -1,0 +1,109 @@
+.site-footer {
+  background-color: rgb(2, 54, 91); /* mantém o estilo do seu gradiente */
+  color: var(--text-primary);
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 40px;
+  margin-top: 20px;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: var(--text-secondary);
+}
+
+.redes-sociais {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-desenvolvedores {
+  position: relative;
+  display: inline-flex;
+  width: max-content;
+  cursor: pointer;
+}
+
+/* Estilo base para as imagens */
+.img-desenvolvedores img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  border: 2px solid #000;
+  transition: transform 0.3s ease, margin 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dev1 fica por baixo */
+.img-desenvolvedores .dev1 {
+  z-index: 1;
+}
+
+.link-dev {
+  margin-left: -15px;
+}
+
+/* Dev2 por cima, levemente sobreposta */
+.img-desenvolvedores .dev2 {
+  z-index: 2;
+  width: 50px; 
+}
+
+/* Quando passa o mouse no container, separa as imagens */
+.img-desenvolvedores:hover .dev1 {
+  transform: translateX(-15px);
+}
+
+.img-desenvolvedores:hover .dev2 {
+  transform: translateX(15px);
+}
+
+
+@media (max-width: 600px) {
+  .footer-content {
+    gap: 40px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .social-icons {
+    font-size: 20px;
+    gap: 15px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+  }
+}

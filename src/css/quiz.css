@@ -1,0 +1,106 @@
+.tituloQuiz {
+  margin-bottom: 50px;
+}
+
+.pergunta {
+  margin-bottom: 20px;
+  width: 550px;
+}
+.resultado {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+button {
+  padding: 10px 20px;
+  background-color: var(--text-secondary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #010c1d;
+}
+.carousel-container {
+  max-width: 600px;
+  margin: 90px auto;
+  position: relative;
+}
+.carousel-slide {
+  display: none;
+  width: 100%;
+}
+.carousel-slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+.carousel-slide.active {
+  display: block;
+}
+.carousel-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+.carousel-controls button {
+  margin: 0 5px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .pergunta {
+    width: 95%;
+    min-width: unset;
+    max-width: 100%;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carousel-container {
+    max-width: 98vw;
+    padding: 0 1vw;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .tituloQuiz {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+  form#quizForm {
+    width: 100%;
+    padding: 0 2vw;
+    box-sizing: border-box;
+  }
+  .resultado {
+    font-size: 1em;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .carousel-controls button {
+    padding: 8px 10px;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 500px) {
+  .tituloQuiz {
+    font-size: 1em;
+  }
+  .pergunta label {
+    font-size: 0.95em;
+  }
+  .carousel-controls button {
+    font-size: 0.85em;
+    padding: 7px 6px;
+  }
+}
