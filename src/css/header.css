@@ -1,0 +1,169 @@
+header {
+  position: fixed; 
+  background: var(--primary-blue); 
+  width: 100%;
+  min-height: 80px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  z-index: 1000; 
+}
+
+.logo {
+  padding-left: 48px; 
+  padding-top: 11px; 
+  height: auto; 
+  max-height: 60px; 
+  width: auto;
+  cursor: pointer;
+}
+
+.nav {
+  max-width: 1280px; 
+  height: 70px; 
+  margin-inline: auto; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 48px; 
+  box-sizing: border-box; 
+}
+
+.lista-navbar {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+
+.lista-navbar a {
+  font-size: 18px;
+  color: var(--white); 
+  padding: 5px 5px;
+  font-weight: 600;
+  border-radius: 90px;
+  text-decoration: none;
+  transition: color 1.5s ease, background-color 1.5s ease;
+}
+
+.lista-navbar a:hover {
+  color: var(--primary-blue); 
+  background-color: var(--white); 
+}
+
+.shopping-cart img {
+  height: 24px; 
+  width: auto;
+}
+
+.pincel {
+  font-size: 20px;
+}
+
+.btn_navbar {
+  display: none; 
+  border: none;
+  background: black;
+  border-bottom: 3px solid var(--white); 
+  cursor: pointer;
+}
+
+.btn_navbar::after,
+.btn_navbar::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--white); 
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 1200px) {
+  .btn_navbar {
+    display: block; 
+    z-index: 101;
+    color: #fff;
+    margin-right: 48px; 
+  }
+
+  .lista-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--primary-blue); 
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .lista-navbar a {
+    font-size: 24px;
+    opacity: 0;
+    font-weight: 600;
+    color: var(--white); 
+  }
+
+  .lista-navbar li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .lista-navbar li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .lista-navbar li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  
+  .nav.active .lista-navbar {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+    z-index: 100;
+  }
+
+  .nav.active .lista-navbar a {
+    opacity: 1;
+  }
+
+  .nav.active .btn_navbar {
+    position: fixed;
+    top: 26px; /* Adjust based on your header height */
+    right: 48px; /* Align with logo padding */
+    border-bottom-color: transparent; /* Hides the top bar of the hamburger */
+    z-index: 101;
+  }
+
+  .nav.active .btn_navbar::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .btn_navbar::after {
+    transform: rotate(-135deg);
+    top: -7px; /* Adjust to cross properly */
+  }
+}
+
+/* Additional responsive adjustments for very small screens if needed */
+@media (max-width: 600px) {
+  .logo {
+    padding-left: 20px;
+  }
+  .nav {
+    padding-right: 20px;
+  }
+  .nav.active .btn_navbar {
+    right: 20px;
+  }
+}
