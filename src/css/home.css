@@ -1,0 +1,77 @@
+.home {
+  padding-top: 150px;
+}
+
+.contentHome h1 {
+  font-size: 60px;
+}
+
+.contentHome p {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 593px;
+}
+
+.contentHome .account {
+  margin-bottom: 23px;
+}
+
+.buttonsRound {
+  color: var(--text-secondary);
+  width: 594px;
+  height: 54.4px;
+  background-color: #fff;
+  border-radius: 100px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonsQuadrados {
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 404px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: 30px;
+  background-color: #fff;
+}
+
+.enchentes {
+  font-size: 18px;
+  gap: 18px;
+}
+
+@media (max-width: 1200px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .contentHome {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contentHome p {
+    width: 80%;
+  }
+
+  .contentHome h1 {
+    font-size: 40px;
+    width: 80%;
+  }
+
+  .buttonsQuadrados {
+    width: 80%;
+    height: auto;
+  }
+
+  .buttonsRound {
+    width: 80%;
+    max-width: 594px;
+  }
+}
